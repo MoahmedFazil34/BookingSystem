@@ -1,0 +1,119 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Seat Layout */
+.seat-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Individual Seat */
+.seat {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Seat Colors */
+.silver {
+  background-color: #cfd8dc;
+}
+
+.gold {
+  background-color: #ffd700;
+}
+
+.platinum {
+  background-color: #e0e0e0;
+}
+
+.seat.selected {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Summary */
+.summary {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.summary span {
+  font-weight: bold;
+}
+
+/* Button */
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .seat-layout {
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 5px;
+  }
+
+  .seat {
+    height: 40px;
+    font-size: 0.8rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
